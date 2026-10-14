@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CareerTrack | Find Your Opportunity</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="/">Career<span>Track</span></a>
+    <a class="nav-link" href="#jobs">Explore Jobs</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">YOUR CAREER STARTS HERE</p>
+      <h1>Find the opportunity<br>that <span>moves you forward.</span></h1>
+      <p class="subtitle">
+        Discover internships and jobs. Take the next step in your career.
+      </p>
+
+      <form id="searchForm" class="search-box">
+        <input id="search" placeholder="Job title or company">
+        <input id="location" placeholder="Location">
+        <select id="category">
+          <option value="">All opportunities</option>
+          <option value="Internship">Internship</option>
+          <option value="Full-time">Full-time</option>
+          <option value="Part-time">Part-time</option>
+        </select>
+        <button type="submit">Search</button>
+      </form>
+    </section>
+
+    <section id="jobs" class="jobs-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">EXPLORE YOUR FUTURE</p>
+          <h2>Latest opportunities</h2>
+        </div>
+        <span id="jobCount" class="count">Loading...</span>
+      </div>
+
+      <p id="message" class="message" aria-live="polite"></p>
+      <div id="jobList" class="job-grid"></div>
+    </section>
+
+    <section class="admin-section">
+      <h2>Post a new opportunity</h2>
+      <p class="subtitle">Demo form for adding jobs to the database.</p>
+
+      <form id="jobForm" class="job-form">
+        <input name="title" placeholder="Job title" required>
+        <input name="company" placeholder="Company name" required>
+        <input name="location" placeholder="Location" required>
+
+        <select name="category">
+          <option>Internship</option>
+          <option>Full-time</option>
+          <option>Part-time</option>
+        </select>
+
+        <input name="salary" placeholder="Stipend or salary">
+        <textarea name="description" placeholder="Job description"></textarea>
+        <button type="submit">Add Opportunity</button>
+      </form>
+      <p id="formMessage" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 CareerTrack · Built for aspiring professionals</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
